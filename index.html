@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkerboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="checkerboard">
+    <!-- Creating a checkerboard pattern using div elements -->
+    <!-- Each row follows the alternating black-pink pattern -->
+    <!-- This approach avoids repeating manual div placements -->
+    <!-- The checkerboard is dynamically structured using CSS Grid -->
+    <script>
+      const checkerboard = document.querySelector(".checkerboard");
+      for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+          const square = document.createElement("div");
+          square.classList.add("square", (row + col) % 2 === 0 ? "black" : "pink");
+          checkerboard.appendChild(square);
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>
